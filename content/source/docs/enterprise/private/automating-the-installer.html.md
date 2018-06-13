@@ -110,7 +110,7 @@ The following apply to every installation:
 - `installation_type` — (Required) one of `poc` or `production`
 - `capacity_concurrency` — number of concurrent plans and applies; defaults to `10`
   to be able to generate certificates.
-- `extra_no_proxy` — (Optional) when configured to use a proxy, a `,` (comma) separated list of hosts to exclude from proxying
+- `extra_no_proxy` — (Optional) when configured to use a proxy, a `,` (comma) separated list of hosts to exclude from proxying. Please note that this list does not support whitespace characters. For example: `127.0.0.1,tfe.myapp.com,myco.github.com`.
 - `ca_certs` — (Optional) custom certificate authority (CA) bundle. JSON does not allow raw newline characters, so replace any newlines
   in the data with `\n`. For instance:
 
